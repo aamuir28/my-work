@@ -1,0 +1,46 @@
+@url = http://localhost:8080/api/Community
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwbGFudC1wYXJlbnRzIiwic3ViIjoiYWRtaW4iLCJhcHBVc2VySWQiOjIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImV4cCI6MTY4MDYyMjQ5Mn0.GR3U_rqDao-Pp73wVzUY9TPjy4k1VWvxeIDyTsPVYak
+
+###
+
+GET {{url}} HTTP/1.1
+
+###
+
+GET {{url}}/2 HTTP/1.1
+
+### 
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "name": "Peas and Quiet"
+}
+
+###
+
+PUT {{url}}/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "communityId": 2,
+    "name": "X Marks The Sprout"
+}
+
+###
+
+DELETE {{url}}/4 HTTP/1.1
+Authorization: Bearer {{jwt}}
+
+###
+
+POST http://localhost:8080/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}

@@ -1,0 +1,61 @@
+@url = http://localhost:8080/api/gardener
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwbGFudC1wYXJlbnRzIiwic3ViIjoiYWRtaW4iLCJhcHBVc2VySWQiOjIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImV4cCI6MTY4MDYyMTA1MX0.miyoMkhXN20_U8i2mwbuZP_z-phM14oFFmp42REMtrQ
+
+###
+
+GET {{url}} HTTP/1.1
+
+###
+
+GET {{url}}/1 HTTP/1.1
+
+###
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "firstName": "Henry",
+    "lastName": "Golding",
+    "isAdmin": false
+}
+
+###
+
+PUT {{url}}/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "gardenerId": 1,
+    "firstName": "Constance",
+    "lastName": "Wu",
+    "isAdmin": true
+}
+
+###
+
+DELETE {{url}}/2 HTTP/1.1
+Authorization: Bearer {{jwt}}
+
+###
+
+POST http://localhost:8080/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+### 
+
+POST http://localhost:8080/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "user",
+    "password": "user"
+}
+

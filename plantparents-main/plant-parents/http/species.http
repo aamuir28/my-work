@@ -1,0 +1,52 @@
+@url = http://localhost:8080/api/species
+@jwt =  eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwbGFudC1wYXJlbnRzIiwic3ViIjoiYWRtaW4iLCJhcHBVc2VySWQiOjIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImV4cCI6MTY4MDYyMjMyN30.DkzOLK83WR1sXr7Z-VWNfFQTNPCS8xNuOXPZEgRUTFc
+
+###
+
+GET {{url}} HTTP/1.1
+
+###
+
+GET {{url}}/2 HTTP/1.1
+
+###
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "commonName": "Plant",
+    "scientificName": "Plantus",
+    "cycle": "Perennial",
+    "wateringFrequency": "Once a week"
+}
+
+###
+
+PUT {{url}}/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "speciesId": 2,
+    "commonName": "Updated",
+    "scientificName": "Updated Plant",
+    "cycle": "Perennial",
+    "wateringFrequency": "Once a week"
+}
+
+###
+
+DELETE {{url}}/7 HTTP/1.1
+Authorization: Bearer {{jwt}}
+
+###
+
+POST http://localhost:8080/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}

@@ -1,0 +1,36 @@
+.navbar {
+    flex: content;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right, white, white, rgb(202, 197, 197), #98BF64);
+    /* width: 90vw; */
+    height: 10vh;
+    /* padding-left: 5vw; */
+    border-radius: 5px;
+}
+
+/* borderRadius: '5px', backgroundColor: "#98BF64" */
+
+.list-inline>.list-inline-item {
+    text-align: right;
+    font-weight: 900;
+    margin-left: 8vw;
+}
+
+/* .searchBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchField {
+    box-shadow: inset 1px 1px 2px 1px gray;
+    width: 20vw;
+    height: 3vh;
+    border-radius: 5px;
+}
+
+.searchBox>.btn {
+    color: darkgreen;
+} */

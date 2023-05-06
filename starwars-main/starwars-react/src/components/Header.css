@@ -1,0 +1,40 @@
+.header {
+  /* width: 90vw;
+  height: 45vh; */
+  color: #3a3a3a;
+  /* padding: 2% 2%; */
+  margin: 2%;
+  /* margin-left: 0px; */
+  font-size: 2em;
+  border-top-style: solid;
+  border-top-color: 2px #648dff;
+  box-shadow: 10px 5px 5px black;
+}
+
+.header a {
+  color: rgb(255, 248, 230);
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: #ffffff;
+}
+
+.carousel-item > img {
+  max-width: inherit;
+  height: 40vh;
+  object-fit: cover;
+}
+h5 {
+  color: lightslategray;
+}
+.carousel-fade >
+  .carousel-item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: opacity 2s ease-in-out;
+}

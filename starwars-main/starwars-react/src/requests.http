@@ -1,0 +1,21 @@
+@base_url = https://swapi.dev/api/
+
+GET {{base_url}} HTTP/1.1
+
+###
+
+GET {{base_url}}/people/1 HTTP/1.1
+
+###
+
+GET {{base_url}}/films/5 HTTP/1.1
+
+###
+
+GET {{base_url}}/species/1 HTTP/1.1
+
+###
+
+GET {{base_url}}/starships/12 HTTP/1.1
+
+###
